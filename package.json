@@ -8,7 +8,10 @@
   ],
   "main": "src/index.js",
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
     "loader-utils": "3.2.1",
+    "mongoose": "^7.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-scripts": "5.0.1"
@@ -28,5 +31,15 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Higashi8910/todo-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Higashi8910/todo-test/issues"
+  },
+  "homepage": "https://github.com/Higashi8910/todo-test#readme"
 }
