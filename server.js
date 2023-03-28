@@ -11,7 +11,8 @@ const uri =
   "mongodb+srv://todouser:todouser@cluster0.z0i2rug.mongodb.net/todoList?retryWrites=true&w=majority";
 mongoose
   .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log("データベース接続成功"));
+  .then(() => console.log("データベース接続成功"))
+  .catch((err) => console.log(err));
 
 const connection = mongoose.connection;
 connection.once("open", () => {
