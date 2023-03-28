@@ -27,11 +27,16 @@ export const App = () => {
   const onClickAdd = async () => {
     if (todoText === "") return;
     const newTodo = { text: todoText, completed: false };
-    const response = await fetch("http://localhost:5000/todos", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(newTodo),
-    });
+    console.log(newTodo);
+    try {
+      const response = await fetch("http://localhost:5000/todos", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newTodo),
+      });
+    } catch (error) {
+      // console.log(error);
+    }
     const createdTodo = await response.json();
     setIncompleteTodos([...incompleteTodos, createdTodo]);
     setTodoText("");

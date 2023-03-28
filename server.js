@@ -6,6 +6,13 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+const corsOptions = {
+  origin: "https://n64n6p-3000.csb.app/",
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
+
 // MongoDB接続設定
 const uri =
   "mongodb+srv://todouser:todouser@cluster0.z0i2rug.mongodb.net/todoList?retryWrites=true&w=majority";
