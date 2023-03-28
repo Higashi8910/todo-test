@@ -9,7 +9,7 @@ export const CompleteTodos = (props) => {
         {todos.map((todo, index) => {
           return (
             <div key={todo} className="list-row">
-              <li>{todo}</li>
+              <li>{todo.text}</li>
               <button onClick={() => onClickBack(index)}>戻す</button>
             </div>
           );
